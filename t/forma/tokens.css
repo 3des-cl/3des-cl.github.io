@@ -1,0 +1,43 @@
+/* Generado por tools/tokens.mjs desde src/temas/forma/DESIGN.md. No editar a mano. */
+:root, [data-tema="forma"] {
+  --color-primary: #E06A0A;
+  --color-primary-strong: #B04F06;
+  --color-on-primary: #FFFFFF;
+  --color-accent: #F1740B;
+  --color-amber: #FDAF56;
+  --color-cream: #FEF1E3;
+  --color-copper: #A64A01;
+  --color-text-grad-a: #C85C08;
+  --color-text-grad-b: #8A3A00;
+  --color-secondary: #F6F3EF;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-text: #16202A;
+  --color-muted: #4D5862;
+  --color-border: #E4E0DA;
+  --color-carbon: #1B2830;
+  --color-dark: #10181E;
+  --color-on-dark: #FFFFFF;
+  --color-bruma: #B9C2C9;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --color-neutral: #FFFFFF;
+  --font-h1: "Bricolage Grotesque", system-ui, sans-serif;
+  --size-h1: 7rem;
+  --font-h2: "Bricolage Grotesque", system-ui, sans-serif;
+  --size-h2: 4.2rem;
+  --font-body-md: "Inter", system-ui, sans-serif;
+  --size-body-md: 1.0625rem;
+  --font-label-caps: "Inter", system-ui, sans-serif;
+  --size-label-caps: 0.8rem;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --space-sm: 4px;
+  --space-md: 8px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-seccion: 128px;
+}

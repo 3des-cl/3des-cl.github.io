@@ -1,0 +1,38 @@
+/* Generado por tools/tokens.mjs desde src/temas/institucional/DESIGN.md. No editar a mano. */
+:root, [data-tema="institucional"] {
+  --color-primary: #DD6A0B;
+  --color-primary-strong: #A4480A;
+  --color-on-primary: #FFFFFF;
+  --color-accent: #F1740B;
+  --color-secondary: #F2F4F5;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-text: #111A20;
+  --color-muted: #56636C;
+  --color-ink-soft: #35424B;
+  --color-border: #CDD4D9;
+  --color-dark: #1B2830;
+  --color-on-dark: #FFFFFF;
+  --color-on-dark-soft: #CBD3D8;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --color-neutral: #FFFFFF;
+  --font-h1: "Source Serif 4", Georgia, serif;
+  --size-h1: 4.6rem;
+  --font-h2: "Source Serif 4", Georgia, serif;
+  --size-h2: 2.6rem;
+  --font-body-md: "Inter", system-ui, sans-serif;
+  --size-body-md: 1rem;
+  --font-label-caps: "Inter", system-ui, sans-serif;
+  --size-label-caps: 0.78rem;
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-pill: 2px;
+  --space-sm: 4px;
+  --space-md: 8px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-seccion: 96px;
+}

@@ -1,0 +1,38 @@
+/* Generado por tools/tokens.mjs desde src/temas/conversacion/DESIGN.md. No editar a mano. */
+:root, [data-tema="conversacion"] {
+  --color-primary: #E36B0A;
+  --color-primary-strong: #A84E08;
+  --color-on-primary: #FFFFFF;
+  --color-accent: #F1740B;
+  --color-soft: #FCD9BC;
+  --color-secondary: #FFF5EC;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-text: #2B3036;
+  --color-muted: #555C63;
+  --color-border: #EADDD1;
+  --color-line: #A3A7AB;
+  --color-dark: #1B2830;
+  --color-on-dark: #FFFFFF;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --color-neutral: #FFFFFF;
+  --font-h1: "Lexend", system-ui, sans-serif;
+  --size-h1: 4.5rem;
+  --font-h2: "Lexend", system-ui, sans-serif;
+  --size-h2: 2.9rem;
+  --font-body-md: "Inter", system-ui, sans-serif;
+  --size-body-md: 1.0625rem;
+  --font-label-caps: "Inter", system-ui, sans-serif;
+  --size-label-caps: 0.8rem;
+  --radius-sm: 6px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --space-sm: 4px;
+  --space-md: 8px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-seccion: 112px;
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es-CL" data-tema="visor">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js')</script>
+  <title>3DES | Propuestas de sitio web</title>
+  <meta name="description" content="Seis propuestas de sitio corporativo para 3DES, figuras personalizadas y diseño 3D en Concepción, con un selector para compararlas.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://3des-cl.github.io/">
+
+  <link rel="icon" type="image/png" href="/img/icono-180.png">
+  <link rel="apple-touch-icon" href="/img/icono-180.png">
+
+  <meta property="og:title" content="3DES | Propuestas de sitio web">
+  <meta property="og:description" content="Seis propuestas de sitio corporativo para 3DES, figuras personalizadas y diseño 3D en Concepción, con un selector para compararlas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://3des-cl.github.io/">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="3DES, figuras personalizadas y diseño 3D">
+  <meta property="og:image" content="https://3des-cl.github.io/img/grad-magdalena.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="">
+  
+</head>
+<body>
+
+  <h1 class="v-solo-lectores">Propuestas de sitio web para 3DES</h1>
+
+  <!--
+    Visor de propuestas. Cada propuesta es un sitio completo dentro de su propio
+    documento (iframe), así ninguna comparte estilos con las otras y se ve
+    exactamente como se verá publicada. El selector solo cambia cuál se muestra,
+    y al cambiar conserva la página en la que estaba el visitante.
+
+    Es el selector estándar de los visores de propuestas de INCBA: píldora de varias
+    posiciones con pulsador, etiqueta con el nombre que se desvanece a los 3 s y
+    vuelve al pasar el puntero, flechas de teclado, elección guardada solo al
+    hacer clic, más la tarjeta "Sobre esta propuesta" con qué transmite, público,
+    voz, paleta y tipografía.
+  -->
+
+  <iframe class="v-marco" data-marco title="Propuesta Forma" src="/t/forma/"></iframe>
+
+  <div class="v-zona" data-zona>
+    <div class="v-fila">
+      <button type="button" class="v-toggle" data-boton>
+        <span class="v-pulsador" data-pulsador></span>
+      </button>
+      <span class="v-etiqueta" data-etiqueta hidden></span>
+    </div>
+    <button type="button" class="v-pastilla" data-pastilla aria-expanded="false" aria-controls="v-tarjeta"><b aria-hidden="true">?</b>Sobre esta propuesta</button>
+    <section id="v-tarjeta" class="v-tarjeta" data-tarjeta role="dialog" aria-labelledby="v-titulo" hidden>
+      <div class="v-cabeza">
+        <span class="v-letra" data-letra aria-hidden="true">A</span>
+        <div><p class="v-rotulo">Propuesta <span data-letra-txt>A</span></p><h2 id="v-titulo" data-nombre>Nombre</h2></div>
+      </div>
+      <button type="button" class="v-cerrar" data-cerrar aria-label="Cerrar la descripción de la propuesta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <p class="v-resumen" data-resumen></p>
+      <dl>
+        <div><dt>Qué transmite</dt><dd data-transmite></dd></div>
+        <div><dt>A quién le habla</dt><dd data-publico></dd></div>
+        <div><dt>Voz</dt><dd data-voz></dd></div>
+        <div><dt>Paleta</dt><dd><span data-paleta-nombre></span><div class="v-colores" data-paleta aria-hidden="true"></div></dd></div>
+        <div><dt>Tipografía</dt><dd data-tipografia></dd></div>
+        <div><dt>Inspiración</dt><dd data-base></dd></div>
+      </dl>
+      <p class="v-aviso">Las propuestas usan los textos y las fotos de las publicaciones de 3DES; algunas cambian el orden y el tono para mostrar otro enfoque. Los precios y plazos son por confirmar con 3DES.</p>
+    </section>
+  </div>
+
+<style>
+  :root {
+    --toggle-pista: hsl(0 0% 63.9% / 0.4);
+    --toggle-pulsador: #fff;
+    --toggle-icono: #F1740B;
+    --toggle-anillo: #F1740B;
+    --toggle-anillo-fondo: #fff;
+    --v-tinta: #1B2830;
+    --v-fondo: #fff;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { background: #fff; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--v-tinta); }
+  .v-solo-lectores { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+  .v-marco { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
+
+  .v-zona { position: fixed; left: 1rem; top: 50%; transform: translateY(-50%); z-index: 10; display: flex; flex-direction: column; align-items: flex-start; gap: .625rem; }
+  .v-fila { display: flex; align-items: center; gap: .625rem; }
+
+  .v-toggle { position: relative; display: inline-flex; align-items: center; flex: none; height: 1.75rem; padding: 0; border: 0; border-radius: 9999px; background-color: var(--toggle-pista); cursor: pointer; transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .v-toggle:hover { background-color: hsl(0 0% 63.9% / 0.55); }
+  .v-toggle:focus { outline: 2px solid transparent; outline-offset: 2px; }
+  .v-toggle:focus-visible { box-shadow: 0 0 0 2px var(--toggle-anillo-fondo), 0 0 0 4px var(--toggle-anillo); }
+  .v-pulsador { display: inline-flex; align-items: center; justify-content: center; height: 1.25rem; width: 1.25rem; border-radius: 9999px; background-color: var(--toggle-pulsador); box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); color: var(--toggle-icono); transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .v-pulsador svg { height: 0.75rem; width: 0.75rem; }
+
+  .v-etiqueta { padding: .25rem .625rem; border-radius: 9999px; background: var(--v-tinta); color: #fff; font-size: .75rem; font-weight: 600; line-height: 1.4; white-space: nowrap; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.15); transition: opacity 300ms ease; }
+  .v-etiqueta.oculta { opacity: 0; pointer-events: none; }
+
+  .v-pastilla { display: inline-flex; align-items: center; gap: .5rem; border: 0; border-radius: 999px; background: var(--v-tinta); color: #fff; font: 600 .8rem/1 system-ui, sans-serif; padding: .5rem .9rem .5rem .5rem; cursor: pointer; box-shadow: 0 12px 30px -12px rgba(15,23,42,.6); }
+  .v-pastilla b { display: inline-grid; place-items: center; width: 1.5rem; height: 1.5rem; border-radius: 999px; background: #fff; color: var(--v-tinta); font-size: .8rem; }
+  .v-pastilla:hover { background: #0f161b; }
+  .v-pastilla[hidden], .v-tarjeta[hidden] { display: none; }
+
+  .v-tarjeta { position: relative; width: min(23rem, calc(100vw - 2rem)); max-height: calc(100vh - 8rem); overflow: auto; background: var(--v-fondo); border: 1px solid #E5E7EB; border-radius: 1rem; box-shadow: 0 24px 60px -20px rgba(15,23,42,.45); padding: 1rem 1.1rem .9rem; font-size: .875rem; line-height: 1.45; }
+  .v-entra { animation: v-entrar .35s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes v-entrar { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  .v-cabeza { display: flex; align-items: flex-start; gap: .75rem; padding-right: 2rem; }
+  .v-letra { flex: none; display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: .5rem; background: var(--v-tinta); color: #fff; font-weight: 700; font-size: .95rem; }
+  .v-rotulo { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #4B5563; }
+  .v-tarjeta h2 { margin: .1rem 0 0; font-size: 1.1rem; line-height: 1.25; font-weight: 700; color: #111827; }
+  .v-cerrar { position: absolute; top: .75rem; right: .75rem; display: inline-grid; place-items: center; width: 2rem; height: 2rem; border: 0; border-radius: .5rem; background: transparent; color: #374151; cursor: pointer; }
+  .v-cerrar:hover { background: #F3F4F6; }
+  .v-resumen { margin: .75rem 0 0; color: #374151; }
+  .v-tarjeta dl { margin: .75rem 0 0; display: grid; gap: .45rem; }
+  .v-tarjeta dt { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #4B5563; }
+  .v-tarjeta dd { margin: .1rem 0 0; }
+  .v-colores { display: flex; gap: .3rem; margin-top: .3rem; }
+  .v-colores span { width: 1.35rem; height: 1.35rem; border-radius: .35rem; border: 1px solid rgba(0,0,0,.1); }
+  .v-aviso { margin: .75rem 0 0; padding: .55rem .75rem; border-radius: .6rem; background: #FFF7ED; border: 1px solid #FED7AA; color: #7C2D12; font-size: .8rem; }
+  .v-tarjeta :focus-visible, .v-pastilla:focus-visible { outline: 3px solid #F1740B; outline-offset: 2px; }
+
+  @media (max-width: 600px) {
+    .v-zona { left: .75rem; top: auto; bottom: 1rem; transform: none; }
+    .v-etiqueta { display: none; }
+    .v-tarjeta { width: calc(100vw - 1.5rem); max-height: 60vh; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .v-toggle, .v-pulsador, .v-etiqueta { transition: none; }
+    .v-entra { animation: none; }
+  }
+</style>
+
+<script>
+  (function () {
+    'use strict'
+    var OPCIONES = [{"id":"forma","letra":"A","nombre":"Forma","ruta":"/t/forma/","icono":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 20v-6\"/><path d=\"M9 20V8\"/><path d=\"M14 20V4\"/><path d=\"M19 20v-9\"/></svg>","resumen":"Energía y relato propio: el lema \"Ideas que toman forma\" y las barras del isotipo en movimiento, con verbos de acción y el degradado naranjo del logo.","ficha":{"transmite":"Energía y ambición. Cada figura es una idea que toma volumen, capa por capa.","publico":"Quien busca un regalo con impacto y una marca con aire actual: jóvenes, parejas, coleccionistas y empresas.","voz":"Tuteo, frases cortas y verbos de acción.","paleta":["#10181E","#F1740B","#FDAF56","#A64A01","#F6F3EF"],"paletaNombre":"Propia, sacada del degradado del isotipo","tipografia":"Bricolage Grotesque en títulos, Inter en texto.","base":"El logo en movimiento: las barras del isotipo y su degradado naranjo."}},{"id":"conversacion","letra":"B","nombre":"Conversación","ruta":"/t/conversacion/","icono":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\"/></svg>","resumen":"Se lee como la primera conversación con 3DES: las preguntas llegan antes que la figura, y cada línea se cuenta en tres burbujas.","ficha":{"transmite":"Cercanía y escucha. Antes de hablar de la figura, 3DES pregunta por la historia que va a contar.","publico":"Quien encarga por primera vez y quiere sentirse acompañado: familias, parejas y quienes agradecen a alguien.","voz":"Tuteo, directo y cálido, en primera persona plural.","paleta":["#FFFFFF","#1B2830","#F1740B","#FCD9BC","#FFF5EC"],"paletaNombre":"Colores del logo: carbón, naranjo y tonos durazno","tipografia":"Lexend en títulos, Inter en texto.","base":"La primera conversación: preguntas antes que respuestas, como un chat con 3DES."}},{"id":"power","letra":"C","nombre":"Vitrina","ruta":"/t/power/","icono":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v18\"/><path d=\"M5 8h14\"/><path d=\"M7 21h10\"/><path d=\"M8 8c0 4 1.8 6 4 6s4-2 4-6\"/></svg>","resumen":"Índigo profundo, letra monoespaciada y titulares en mayúsculas: la figura presentada como un producto de diseño, con el naranjo de marca en cada control.","ficha":{"transmite":"Precisión y carácter. Cada pieza se presenta como un objeto de diseño, con datos claros y un acento naranjo.","publico":"Coleccionistas, empresas y quien busca un regalo con impacto; también quien compara formatos antes de cotizar.","voz":"Corta y segura, con titulares en mayúsculas.","paleta":["#262642","#323256","#F1740B","#F9F6F0","#C4C5D0"],"paletaNombre":"Índigo profundo, naranjo de marca y marfil","tipografia":"IBM Plex Mono en todo el sitio.","base":"Un estudio de diseño de producto: piezas en paneles, formatos comparables y controles en píldora."}},{"id":"premium","letra":"D","nombre":"Galería","ruta":"/t/premium/","icono":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><circle cx=\"9\" cy=\"9\" r=\"2\"/><path d=\"m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21\"/></svg>","resumen":"Negro y carbón, tipografía precisa y las piezas dentro de una pantalla clara: la presentación de una marca de producto de alta gama.","ficha":{"transmite":"Calidad y confianza. El producto es el protagonista, con mucho aire y una presentación pulida.","publico":"Colegios, empresas y familias que comparan proveedores y valoran una presencia cuidada.","voz":"Clara y directa. Frases cortas, con el relato de 3DES en su propia voz.","paleta":["#000000","#1D1D1F","#F1740B","#F5F5F7","#A1A1A6"],"paletaNombre":"Negro, carbón y naranjo de marca","tipografia":"Inter en todo el sitio.","base":"La presentación de un producto de alta gama: negro, aire y precisión, con las piezas en primer plano."}},{"id":"terracotta","letra":"E","nombre":"Taller","ruta":"/t/terracotta/","icono":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 7h-9\"/><path d=\"M14 17H5\"/><circle cx=\"17\" cy=\"17\" r=\"3\"/><circle cx=\"7\" cy=\"7\" r=\"3\"/></svg>","resumen":"Café profundo, serifa editorial y botones terracota: el taller artesanal que cuenta cada encargo con su nombre.","ficha":{"transmite":"Calidez y oficio. Cada pieza llega con su historia, contada con las palabras de 3DES.","publico":"Familias que regalan un recuerdo: mascotas, parejas, abuelos, profesionales a los que se agradece.","voz":"Narrativa y cercana, en segunda persona, con los textos de la marca casi tal cual.","paleta":["#1F1610","#2B1D14","#D8825A","#FBF4E7","#C8B89E"],"paletaNombre":"Café profundo, terracota y crema","tipografia":"DM Serif Display en títulos, DM Sans en texto.","base":"Un taller de oficio: tonos de barro cocido, serifas y cifras del trabajo hecho a mano."}},{"id":"institucional","letra":"F","nombre":"Institucional","ruta":"/t/institucional/","icono":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z\"/><path d=\"M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2\"/><path d=\"M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2\"/><path d=\"M10 6h4\"/><path d=\"M10 10h4\"/><path d=\"M10 14h4\"/><path d=\"M10 18h4\"/></svg>","resumen":"Se lee como un informe bien diagramado: secciones numeradas, un proceso en cuatro etapas y trato de usted, pensado para colegios y empresas.","ficha":{"transmite":"Rigor y confianza. El proceso es el argumento: cada etapa dice qué incluye y qué necesita de la institución.","publico":"Colegios, centros de padres, empresas e instituciones que comparan proveedores y deben justificar la elección.","voz":"Trato de usted, formal y estructurado.","paleta":["#FFFFFF","#1B2830","#A4480A","#F1740B","#F2F4F5"],"paletaNombre":"Carbón institucional, cobre y filetes naranjo","tipografia":"Source Serif 4 en títulos, Inter en texto.","base":"Un informe bien diagramado: secciones numeradas, método y datos claros."}}]
+    var AJUSTES = { clave: '3des-propuesta', sustantivo: 'Propuesta', etiquetaSegundos: 3 }
+
+    var ALTO = 1.75, PULSADOR = 1.25, MARGEN = 0.25, PASO = 1.375
+    var ANCHO = MARGEN * 2 + PULSADOR + PASO * (OPCIONES.length - 1)
+    var POSICIONES = OPCIONES.map(function (_, i) { return MARGEN + PASO * i })
+
+    var marco = document.querySelector('[data-marco]')
+    var boton = document.querySelector('[data-boton]')
+    var pulsador = document.querySelector('[data-pulsador]')
+    var etiqueta = document.querySelector('[data-etiqueta]')
+    var pastilla = document.querySelector('[data-pastilla]')
+    var tarjeta = document.querySelector('[data-tarjeta]')
+    var cerrar = document.querySelector('[data-cerrar]')
+    if (!marco || !boton || !pulsador || OPCIONES.length === 0) return
+
+    boton.style.width = ANCHO + 'rem'
+    etiqueta.hidden = false
+
+    /** La página en la que está el visitante dentro de la propuesta activa. */
+    function paginaActual() {
+      try {
+        var ruta = marco.contentWindow.location.pathname
+        var m = ruta.match(/^\/t\/[^/]+\/(.*)$/)
+        return m ? m[1].replace(/\.html$/, '') : ''
+      } catch (e) { return '' }
+    }
+
+    function alMostrar(opcion) {
+      var destino = opcion.ruta + paginaActual()
+      try { if (marco.contentWindow.location.pathname !== destino) marco.setAttribute('src', destino) }
+      catch (e) { marco.setAttribute('src', destino) }
+      marco.title = AJUSTES.sustantivo + ' ' + opcion.nombre
+    }
+
+    function llenarTarjeta(o) {
+      var f = o.ficha
+      document.querySelector('[data-letra]').textContent = o.letra
+      document.querySelector('[data-letra-txt]').textContent = o.letra
+      document.querySelector('[data-nombre]').textContent = o.nombre
+      document.querySelector('[data-resumen]').textContent = o.resumen
+      document.querySelector('[data-transmite]').textContent = f.transmite
+      document.querySelector('[data-publico]').textContent = f.publico
+      document.querySelector('[data-voz]').textContent = f.voz
+      document.querySelector('[data-paleta-nombre]').textContent = f.paletaNombre
+      document.querySelector('[data-paleta]').innerHTML = f.paleta.map(function (c) { return '<span style="background:' + c + '"></span>' }).join('')
+      document.querySelector('[data-tipografia]').textContent = f.tipografia
+      document.querySelector('[data-base]').textContent = f.base
+    }
+
+    // Enlace directo a una propuesta: #forma, #conversacion, #vitrina, #galeria, #taller o
+    // #institucional (el nombre visible, sin tildes). Tiene prioridad sobre la última vista.
+    function slug(o) { return o.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-') }
+    var indice = 0
+    try {
+      var guardado = localStorage.getItem(AJUSTES.clave)
+      for (var i = 0; i < OPCIONES.length; i++) if (OPCIONES[i].id === guardado) indice = i
+    } catch (e) {}
+    var pedido = decodeURIComponent((location.hash || '').slice(1)).toLowerCase()
+    for (var j = 0; j < OPCIONES.length; j++) if (pedido && (slug(OPCIONES[j]) === pedido || OPCIONES[j].id === pedido)) indice = j
+
+    var temporizador = null
+    function mostrarEtiqueta() {
+      etiqueta.classList.remove('oculta')
+      clearTimeout(temporizador)
+      if (AJUSTES.etiquetaSegundos > 0) temporizador = setTimeout(function () { etiqueta.classList.add('oculta') }, AJUSTES.etiquetaSegundos * 1000)
+    }
+
+    function abrirTarjeta(conFoco) {
+      tarjeta.hidden = false; pastilla.hidden = true; pastilla.setAttribute('aria-expanded', 'true')
+      tarjeta.classList.remove('v-entra'); void tarjeta.offsetWidth; tarjeta.classList.add('v-entra')
+      if (conFoco) cerrar.focus()
+    }
+    function cerrarTarjeta(conFoco) {
+      tarjeta.hidden = true; pastilla.hidden = false; pastilla.setAttribute('aria-expanded', 'false')
+      if (conFoco) pastilla.focus()
+    }
+
+    function aplicar(i, guardar) {
+      var opcion = OPCIONES[i]
+      var siguiente = OPCIONES[(i + 1) % OPCIONES.length]
+      alMostrar(opcion)
+      pulsador.style.transform = 'translateX(' + POSICIONES[i] + 'rem)'
+      pulsador.innerHTML = opcion.icono
+      boton.removeAttribute('title')
+      boton.setAttribute('aria-label', 'Cambiar a ' + AJUSTES.sustantivo + ' ' + siguiente.nombre)
+      etiqueta.textContent = opcion.letra + ' · ' + opcion.nombre
+      mostrarEtiqueta()
+      llenarTarjeta(opcion)
+      // Cada cambio arranca con la tarjeta cerrada.
+      cerrarTarjeta(false)
+      if (guardar) { try { localStorage.setItem(AJUSTES.clave, opcion.id) } catch (e) {} }
+      // La dirección refleja la propuesta a la vista, para poder compartirla.
+      try { history.replaceState(null, '', '#' + slug(opcion)) } catch (e) {}
+    }
+
+    function mover(paso) {
+      indice = (indice + paso + OPCIONES.length) % OPCIONES.length
+      aplicar(indice, true)
+    }
+
+    aplicar(indice, false)
+
+    window.addEventListener('hashchange', function () {
+      var h = decodeURIComponent((location.hash || '').slice(1)).toLowerCase()
+      for (var k = 0; k < OPCIONES.length; k++) {
+        if (h && k !== indice && (slug(OPCIONES[k]) === h || OPCIONES[k].id === h)) { indice = k; aplicar(indice, true); break }
+      }
+    })
+
+    boton.addEventListener('click', function () { mover(1) })
+    boton.addEventListener('mouseenter', mostrarEtiqueta)
+    boton.addEventListener('focus', mostrarEtiqueta)
+    boton.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); mover(1) }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); mover(-1) }
+    })
+    pastilla.addEventListener('click', function () { abrirTarjeta(true) })
+    cerrar.addEventListener('click', function () { cerrarTarjeta(true) })
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !tarjeta.hidden) cerrarTarjeta(true) })
+  })()
+</script>
+
+</body>
+</html>

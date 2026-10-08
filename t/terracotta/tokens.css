@@ -1,0 +1,47 @@
+/* Generado por tools/tokens.mjs desde src/temas/terracotta/DESIGN.md. No editar a mano. */
+:root, [data-tema="terracotta"] {
+  --color-primary: #D8825A;
+  --color-primary-strong: #D8825A;
+  --color-primary-deep: #C56A3C;
+  --color-on-primary: #1F1610;
+  --color-brand-subtle: #F4D5BF;
+  --color-tierra: #5C4938;
+  --color-tierra-deep: #4D3624;
+  --color-on-tierra: #FFFFFF;
+  --color-secondary: #2B1D14;
+  --color-surface: #1F1610;
+  --color-card: #2B1D14;
+  --color-text: #FBF4E7;
+  --color-muted: #C8B89E;
+  --color-subtle: #A89378;
+  --color-border: #3A291D;
+  --color-cream: #FBF4E7;
+  --color-on-cream: #2B1D14;
+  --color-dark: #2B1D14;
+  --color-on-dark: #FBF4E7;
+  --color-success: #6B8B3F;
+  --color-warning: #D49032;
+  --color-danger: #8B2812;
+  --color-neutral: #1F1610;
+  --font-h1: "DM Serif Display", Georgia, 'Times New Roman', serif;
+  --size-h1: 3.75rem;
+  --font-h2: "DM Serif Display", Georgia, 'Times New Roman', serif;
+  --size-h2: 2.75rem;
+  --font-h3: "DM Serif Display", Georgia, 'Times New Roman', serif;
+  --size-h3: 1.5rem;
+  --font-body-md: "DM Sans", system-ui, sans-serif;
+  --size-body-md: 1.0625rem;
+  --font-body-lg: "DM Sans", system-ui, sans-serif;
+  --size-body-lg: 1.25rem;
+  --font-label-caps: "DM Sans", system-ui, sans-serif;
+  --size-label-caps: 0.75rem;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-seccion: 96px;
+}

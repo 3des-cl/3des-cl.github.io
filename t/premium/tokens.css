@@ -1,0 +1,43 @@
+/* Generado por tools/tokens.mjs desde src/temas/premium/DESIGN.md. No editar a mano. */
+:root, [data-tema="premium"] {
+  --color-primary: #F1740B;
+  --color-primary-strong: #F1740B;
+  --color-on-primary: #000000;
+  --color-brand-subtle: #FDC79A;
+  --color-brand-tint: #3D1E05;
+  --color-secondary: #1D1D1F;
+  --color-surface: #000000;
+  --color-card: #000000;
+  --color-text: #F5F5F7;
+  --color-muted: #A1A1A6;
+  --color-border: #2D2D2D;
+  --color-screen: #F5F5F7;
+  --color-on-screen: #1D1D1F;
+  --color-dark: #1D1D1F;
+  --color-on-dark: #F5F5F7;
+  --color-success: #248A3D;
+  --color-warning: #C93400;
+  --color-danger: #FF3B30;
+  --color-neutral: #000000;
+  --font-h1: "Inter", system-ui, sans-serif;
+  --size-h1: 5rem;
+  --font-h2: "Inter", system-ui, sans-serif;
+  --size-h2: 3rem;
+  --font-h3: "Inter", system-ui, sans-serif;
+  --size-h3: 1rem;
+  --font-body-md: "Inter", system-ui, sans-serif;
+  --size-body-md: 1rem;
+  --font-body-lg: "Inter", system-ui, sans-serif;
+  --size-body-lg: 1.125rem;
+  --font-label-caps: "Inter", system-ui, sans-serif;
+  --size-label-caps: 0.875rem;
+  --radius-sm: 6px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --radius-pill: 9999px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 64px;
+  --space-seccion: 120px;
+}

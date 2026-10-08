@@ -1,0 +1,40 @@
+/* Generado por tools/tokens.mjs desde src/temas/power/DESIGN.md. No editar a mano. */
+:root, [data-tema="power"] {
+  --color-primary: #F1740B;
+  --color-primary-strong: #F1740B;
+  --color-on-primary: #1A1A2E;
+  --color-brand-subtle: #FFB380;
+  --color-brand-tint: #4A2414;
+  --color-secondary: #2A2A48;
+  --color-surface: #262642;
+  --color-card: #323256;
+  --color-text: #F9F6F0;
+  --color-muted: #C4C5D0;
+  --color-subtle: #9496A8;
+  --color-border: #FFFFFF1F;
+  --color-dark: #1E1E36;
+  --color-on-dark: #F9F6F0;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --color-neutral: #262642;
+  --font-h1: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --size-h1: 3.75rem;
+  --font-h2: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --size-h2: 2.75rem;
+  --font-h3: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --size-h3: 1.125rem;
+  --font-body-md: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --size-body-md: 1.125rem;
+  --font-label-caps: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --size-label-caps: 0.75rem;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-seccion: 90px;
+}
