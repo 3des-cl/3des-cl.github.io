@@ -188,11 +188,12 @@ html.js .aparece { opacity: 0; transform: translateY(14px); transition: opacity 
 html.js .aparece.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { html.js .aparece { opacity: 1; transform: none; transition: none; } }
 
-/* Crédito de INCBA en el pie: el mismo de Kuyen (logo a la altura de dos líneas, atenuado y entero al pasar). */
+/* Crédito de INCBA en el pie: logo a la altura de dos líneas, con opacidad completa (blanco en pies oscuros, positivo en pies claros). */
 .pie__credito { display: flex; align-items: center; gap: 0.625rem; }
 .pie__credito a { display: inline-flex; border-radius: 0.25rem; }
-.pie__credito-logo { display: block; width: auto; height: 2rem; opacity: 0.8; transition: opacity 300ms; }
-.pie__credito a:hover .pie__credito-logo, .pie__credito a:focus-visible .pie__credito-logo { opacity: 1; }
+.pie__credito-logo { display: block; width: auto; height: 2rem; }
+/* Espacio bajo la última fila del pie: el botón flotante de WhatsApp no tapa el crédito al llegar al final. */
+.pie__legal { padding-bottom: 5.5rem; }
 
 /* ---- Propuesta F · Institucional (institucional) ---- */
 /* Propuesta F · Institucional. Enfoque institucional trasladado a 3DES: un
